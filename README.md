@@ -17,9 +17,12 @@ I quickly made a list of plausible data I would need and where I could get them:
 
 Luckily, after a quick Google search I found out that the needed labels and the other data are available on a website I can scrape (more on that later).
 
-I have no idea if this could really work or if there are features that I need to add to make it work but to start I think this is enough to start a try. At least this is also the data one would look at to get an idea of how many fans would come. Let's see if we can improve on these inaccurate predictions based on gut feelings. 
+I have no idea if this could really work or if there are features that I need to add to make it work, but to start I think this is enough to start a try. At least this is also the data one would look at to get an idea of how many fans would come. Let's see if we can improve on these inaccurate predictions based on gut feelings. 
 
 ## Step 1: Define the objectives
-
+* Outputs/Labels: The problem we are facing is a regression problem - we are trying to predict a continous number
+* Failure/Mistakes: In general we could consider both, predicting more fans or less fans, as equally bad. Since the main idea of this project is to reducde food waste by better prediction of fans we take the side of too high demand/fan prediction is more bad than lower estimates. 
+* Business Performance Metric (BPM): We choose the __Mean Absolut Error (MAE)__ as the BPM. It captures the essence of what we are looking for and not that sensitive to "outliers" (e.g. games with more fans, since it is a so called [city derby](https://dictionary.cambridge.org/dictionary/english/local-derby)), which may be harder for the model to learn. 
+* Loss: Since there may be games with higher fans, we still want our model to at least not completly fail at those predictions. Especially these predictions are of special interest to deliver a good forecast, because we could then see the model has learned the patterns. So MAE also as Loss function is not quite what we want. We will go for the __[Huber Loss](https://en.wikipedia.org/wiki/Huber_loss#Pseudo-Huber_loss_function)__. It provides a middle between MAE and the more outlier focused Mean Squared Error (MSE).
 
 
