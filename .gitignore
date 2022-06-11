@@ -134,5 +134,3 @@ dmypy.json
 # ignore txt files (contain API key)
 *.txt
 
-# ignore pictures
-*.png
