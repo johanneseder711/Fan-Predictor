@@ -1,1 +1,1 @@
-![text](comparison.png)
+![text](pics/comparison.png)
