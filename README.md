@@ -37,4 +37,17 @@ I have no idea if this could really work or if there are features that I need to
     * _Geographical data_: I found out about a Python library called __geopy__. The library makes it possible to get lattitude and longitude coordinates for a city if you enter its name. The thing is that in the province (Lower Austria basically) I focused on there are some places having similar town names. For example we have different town called "St. Georgen". They only differ by an extionsion of the name that is not always used (e.g. St. Georgen am Ybbsfelde and St. Georgen am Steinfelde). So when I tried to get the location data for these towns there often happenend mistakes when simply passing the name of the town to geopy. I realized that I needed the postal codes to make it less prone to errors. Getting back to the Website, check where I can find the postal codes of the home teams and scrape them did the trick for me. Then after having the lattitude and longitude coordinates of the towns, geopy also provides a function to compute the distance between to towns by simply passing their coordinates. I randomly double checked some locations to see if the calculated distances made sense, which was the case! 
     * _Weather data_: Doing some Google search lead me to the [Visual Crossing Weather Website](https://www.visualcrossing.com). The provide a nice API to get exactly the data I needed. Since I already had the lattitude and longitude coordinates from geopy and the match dates + times from webscraping I was straightforward to get the weather data from the API. The only thing here was that the API is only allowed to be called 1.000 times per day on their free plan. Since I almost gathered 2.500 matches with different locations and times, I was forced to split up the API calls to 3 day. This was not really a problem, It just took longer for me to get all the weather data.
 * __Learnings__: 
-    * _Gathering data is a process_: In most use cases you rarely get that complete data set you can staight build a model from. Almoste surely, we all know that. There is always data cleaning and imputation involved. But there is more to that. Like it was in the case above, as you move forward to collect your dataset you realize that you need to take a step back and gather additional data to be able to move forward. So I guess at certain times you do not even know what data you need to succeed. And that is part of the data science process. 
+    * _Gathering data is a process_: In most use cases you rarely get that complete data set you can staight build a model from. This is almoste surely, we all know that. There is always data cleaning and imputation involved. But there is more to that. Like it was in the case above, as you move forward to collect your dataset you realize that you need to take a step back and gather additional data to be able to move forward. So I guess at certain times you do not even know what data you need to succeed. And that is part of the data science process.
+
+
+## Step 3: Split the data
+
+## Step 4: Explore the data
+
+## Step 5: Algorithm selection
+
+## Step 6: Train the model
+
+## Step 7: Tune the model
+
+## Step 8: Validate results
