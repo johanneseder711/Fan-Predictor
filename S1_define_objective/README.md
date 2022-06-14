@@ -14,5 +14,7 @@ It is the mean of the squared differences between the groud truth and the models
 
 ## Huber Loss
 
-$$ L_{\delta}(a)= \begin{cases}\frac{1}{2} a^{2} & \text { for }|a| \leq \delta \\ \delta 
+$$ Huber_{\delta}(y^{true}, y^{pred}) = \frac{1}{n}\sum_{i=1}^n\begin{cases}\frac{1}{2} a^{2} & 
+\text { for }|a| \leq \delta \\ 
+\delta 
 \cdot\left(|a|-\frac{1}{2} \delta\right), & \text { otherwise }\end{cases} $$
