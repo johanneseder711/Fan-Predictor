@@ -41,6 +41,7 @@ I have no idea if this could really work or if there are features that I need to
 
 
 ## Step 3: Split the data
+We split the data into 80% train and 20% test sets. The test set will not be touched or modified until the model is ready. We will later after the exploration phase extract a small part of the data as a debug dataset. This will only be a small part of the training data and used to dig deeper into potential errors. We will use cross validation (CV) to do model testing and selection. This has the benefit to 
 
 ## Step 4: Explore the data
 
