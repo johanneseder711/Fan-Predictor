@@ -136,3 +136,6 @@ dmypy.json
 
 # ignore .DS_Store
 *.DS_Store
+
+# ignore .vscode file
+*.vscode
